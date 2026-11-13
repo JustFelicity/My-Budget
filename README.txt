@@ -1,36 +1,36 @@
 MY BUDGET — Installation et utilisation
 
-INSTALLER L'APPLICATION
-1. Décompressez my-budget.zip.
-2. Téléversez TOUT le contenu du dossier my_budget_app à la racine de votre dépôt GitHub (branche publiée par GitHub Pages).
-   Important : téléversez tous les fichiers du ZIP à la racine du dépôt. Les polices et les icônes sont des fichiers séparés à conserver tels quels.
-3. Activez GitHub Pages si ce n'est pas déjà fait et attendez la publication du site en HTTPS.
-4. Sur Android : ouvrez le lien publié dans Chrome, appuyez sur « Installer » dans My Budget ou choisissez « Installer l'application » / « Ajouter à l'écran d'accueil » dans le menu du navigateur.
-5. Sur iPhone/iPad : ouvrez le lien dans Safari, appuyez sur Partager, puis « Sur l'écran d'accueil » et « Ajouter ».
+INSTALLATION
+1. Décompressez cette archive.
+2. Téléversez les 7 fichiers à la racine du dépôt GitHub publié avec GitHub Pages.
+3. Ouvrez l'adresse HTTPS dans Chrome (Android) ou Safari (iPhone).
+4. Chrome/Safari peut proposer l'installation ou l'ajout à l'écran d'accueil depuis son propre menu. My Budget n'affiche pas de bouton Installer.
 
-L'application est une PWA installable : elle s'ouvre dans sa propre fenêtre, avec son icône, comme une application classique. Elle ne nécessite pas le Play Store.
+HISTORIQUE
+- L'historique commence en 2000 et va jusqu'à l'année en cours.
+- Pour une année passée, les 12 mois sont disponibles.
+- Pour l'année en cours, seuls le mois actuel et les mois précédents sont proposés.
+- Aucun mois futur ne peut être ouvert pour la saisie.
+- Un mois ancien sans données peut être ouvert et complété manuellement.
 
-DONNÉES ET CONNEXION
+DONNÉES ET CONFIDENTIALITÉ
 - Aucune base de données en ligne, aucun compte et aucune synchronisation distante.
-- Les données financières sont enregistrées localement sur l'appareil, dans le stockage du navigateur de l'application.
-- Après le premier chargement en ligne, les fichiers de l'application sont mis en cache et l'application peut s'ouvrir hors connexion.
-- Les données ne sont pas partagées entre plusieurs téléphones.
-- Attention : effacer les données du navigateur ou désinstaller l'application peut supprimer les données locales. Faites régulièrement une sauvegarde depuis Paramètres > Sauvegarde des données > Exporter la sauvegarde, et conservez le fichier JSON ailleurs (par exemple dans un espace de fichiers personnel).
+- Les données financières restent dans le stockage local de l'appareil.
+- Après le premier chargement en ligne, l'application peut fonctionner hors connexion.
+- Effacer les données du navigateur ou désinstaller l'application peut supprimer les données locales. Exportez régulièrement une sauvegarde depuis Paramètres.
 
 FICHES PDF
-- Chaque fiche mensuelle propose « Télécharger la fiche PDF » : le fichier est généré directement par l'application, sans fenêtre d'impression et sans envoyer les données sur Internet.
-- Le bilan annuel propose également « Télécharger le bilan PDF ».
-- Les PDF sont générés sur l'appareil.
-
-POLICES ET CONFIDENTIALITÉ
-- Les polices Lato et Accanthis sont fournies avec les fichiers de l’application et mises en cache pour fonctionner hors connexion.
-- Aucun service externe n'est utilisé pour générer les fiches PDF.
+- Les fiches mensuelles et le bilan annuel sont générés directement sur l'appareil et téléchargés en PDF.
+- Aucune donnée financière n'est envoyée sur Internet pour produire les PDF.
 
 RAPPELS
-- Les rappels de fin de mois, de début de mois et de bilan annuel sont affichés lorsque l'application est ouverte.
-- Les notifications automatiques garanties lorsque l'application est complètement fermée nécessiteraient un service push externe ; elles ne sont donc pas promises ici.
+- Les rappels sont affichés lorsque l'application est ouverte. Les notifications automatiques lorsque l'application est complètement fermée nécessitent un service push externe.
 
 COMPTABILITÉ
-- Les dépenses fixes configurées sont provisionnées et déduites automatiquement du solde du mois. Ne les saisissez pas une seconde fois dans Mouvements, qui sert aux dépenses ponctuelles.
-- Les dépôts d'épargne réduisent le solde disponible ; les retraits l'augmentent. L'épargne est suivie séparément.
-- Les données historiques restent modifiables depuis les fiches mensuelles et les mouvements.
+- Les dépenses fixes configurées sont provisionnées et déduites automatiquement du solde du mois. Ne les saisissez pas une seconde fois dans Mouvements.
+- Les dépôts d'épargne réduisent le solde disponible ; les retraits l'augmentent.
+
+THÈMES
+- Trois palettes sont proposées à l'initialisation : Rose & indigo, Bleu glacier et Sauge naturelle.
+- La palette peut être changée à tout moment dans Paramètres.
+- Le changement de palette ne modifie ni le profil financier, ni les mois, ni les mouvements enregistrés.
