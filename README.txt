@@ -1,4 +1,4 @@
-MY BUDGET — VERSION 9
+MY BUDGET — VERSION 11
 
 Application de budget personnel, installable comme PWA et utilisable hors connexion après le premier chargement.
 
@@ -26,3 +26,7 @@ FONCTIONNEMENT
 PROTECTION
 - Le PIN ou mot de passe est facultatif, proposé pendant l'initialisation et modifiable/supprimable dans Paramètres.
 - Le secret est stocké sous forme de dérivé PBKDF2 salé dans le stockage local. C'est un verrou d'accès local, pas un chiffrement complet des données.
+
+VERSION 11
+- Les cartes de solde de l'Accueil et de l'Épargne sont dépliables : la composition des entrées et la provenance de l'épargne apparaissent à la demande.
+- Ajout des palettes sombres Noir & or et Nuit boréale.
