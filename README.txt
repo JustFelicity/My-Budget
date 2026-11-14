@@ -1,45 +1,28 @@
-MY BUDGET — Installation et utilisation
+MY BUDGET — VERSION 9
 
-INSTALLATION
-1. Décompressez cette archive.
-2. Téléversez les 7 fichiers à la racine du dépôt GitHub publié avec GitHub Pages.
-3. Ouvrez l'adresse HTTPS dans Chrome (Android) ou Safari (iPhone).
-4. Chrome/Safari peut proposer l'installation ou l'ajout à l'écran d'accueil depuis son propre menu. My Budget n'affiche pas de bouton Installer.
+Application de budget personnel, installable comme PWA et utilisable hors connexion après le premier chargement.
 
-HISTORIQUE
-- L'historique commence en 2000 et va jusqu'à l'année en cours.
-- Pour une année passée, les 12 mois sont disponibles.
-- Pour l'année en cours, seuls le mois actuel et les mois précédents sont proposés.
-- Aucun mois futur ne peut être ouvert pour la saisie.
-- Un mois ancien sans fiche affiche d'abord un message ; sa fiche vierge n'est créée qu'après confirmation. Aucune donnée d'un autre mois n'est copiée.
-- Chaque fiche mensuelle est indépendante et peut être complétée/modifiée sans changer les autres mois.
+MISE À JOUR
+1. Décompressez l'archive.
+2. Remplacez les fichiers à la racine de votre dépôt GitHub Pages par les fichiers de cette archive.
+3. Conservez la même adresse GitHub Pages et ne supprimez pas les données du navigateur.
+4. Rechargez le site. Si l'ancienne version reste affichée, fermez complètement l'application puis rouvrez-la ; le service worker utilise un nouveau cache.
 
-DONNÉES ET CONFIDENTIALITÉ
-- Aucune base de données en ligne, aucun compte et aucune synchronisation distante.
-- Les données financières restent dans le stockage local de l'appareil.
-- Après le premier chargement en ligne, l'application peut fonctionner hors connexion.
-- Effacer les données du navigateur ou désinstaller l'application peut supprimer les données locales. Exportez régulièrement une sauvegarde depuis Paramètres.
+DONNÉES ET MIGRATION
+- Les données restent stockées localement dans le navigateur (localStorage, clé mybudget_v1).
+- La migration depuis les versions précédentes conserve le profil, les dépenses fixes, les dépenses mobiles, les salaires et les mouvements d'épargne déjà enregistrés.
+- Les dates de salaire et de dépenses sont supprimées conformément au nouveau fonctionnement. La date réelle des remboursements de crédit est conservée et ne peut pas être postérieure à la date du jour.
+- Avant toute mise à jour importante, exportez une sauvegarde depuis Paramètres.
 
-FICHES PDF
-- Les fiches mensuelles et le bilan annuel sont générés directement sur l'appareil et téléchargés en PDF.
-- Aucune donnée financière n'est envoyée sur Internet pour produire les PDF.
+FONCTIONNEMENT
+- Après l'initialisation, choisissez vous-même le mois de référence. Les mois proposés vont de janvier 2020 au mois réel autorisé par le calendrier ; le mois suivant n'apparaît que pendant la dernière semaine du mois réel.
+- Tous les onglets suivent le mois consulté. Le bouton de retour ramène au mois de référence.
+- Les mois clôturés restent modifiables via « Modifier ce mois ». Les soldes concernés sont recalculés.
+- Les dépenses fixes intégrées et personnalisées sont gérées dans Paramètres ; chaque mois conserve ses propres montants. Les dépenses ponctuelles sont appelées « Dépenses mobiles ».
+- Les contributions d'épargne sont définies une seule fois par mois. Le solde cumulé est calculé selon les mois, retraits et remboursements. Pour répartir les retraits entre les origines, les contributions les plus anciennes sont utilisées en premier.
+- Les crédits restent visibles de leur mois de création jusqu'au mois de leur remboursement complet. Les remboursements peuvent provenir de l'épargne cumulée ou du solde d'un mois déterminé. Un remboursement est rattaché au mois consulté, tandis que sa date réelle est conservée séparément.
+- Les fiches mensuelles et bilans annuels PDF sont générés localement.
 
-RAPPELS
-- Les rappels sont affichés lorsque l'application est ouverte. Les notifications automatiques lorsque l'application est complètement fermée nécessitent un service push externe.
-
-DÉPENSES FIXES ET PONCTUELLES
-- Neuf postes de dépenses fixes sont intégrés par défaut : Dime, Ration alimentaire, Communication, Pain, Transport Fély, Mon allocation, Salaire aide ménagère, Toilette et Maman.
-- À la première utilisation, vous pouvez renseigner leurs montants pendant l’initialisation ou passer cette étape. Les montants restent modifiables dans Paramètres.
-- Pour une dépense ponctuelle, renseignez un nom, un montant et une date. Le champ de précision est facultatif ; aucune catégorie n’est demandée.
-
-COMPTABILITÉ
-- Les dépenses fixes configurées sont provisionnées et déduites automatiquement du solde du mois. Ne les saisissez pas une seconde fois dans Mouvements.
-- L'Accueil affiche uniquement l'épargne nette du mois consulté (le mois actuel lorsque vous revenez à l'Accueil).
-- L'onglet Épargne présente le total cumulé et le détail des montants par mois d'origine.
-- Au premier accès à un nouveau mois, l'application demande si l'épargne nette du mois précédent doit être reportée. Le report reste dans l'épargne, garde son mois d'origine et n'augmente jamais le solde disponible pour les dépenses. Le choix est mémorisé pour le mois.
-- Les dépôts réduisent le solde disponible du mois ; les retraits l'augmentent. Le report, lui, ne modifie pas le solde disponible.
-
-THÈMES
-- Trois palettes sont proposées à l'initialisation : Rose & indigo, Bleu glacier et Sauge naturelle.
-- La palette peut être changée à tout moment dans Paramètres.
-- Le changement de palette ne modifie ni le profil financier, ni les mois, ni les mouvements enregistrés.
+PROTECTION
+- Le PIN ou mot de passe est facultatif, proposé pendant l'initialisation et modifiable/supprimable dans Paramètres.
+- Le secret est stocké sous forme de dérivé PBKDF2 salé dans le stockage local. C'est un verrou d'accès local, pas un chiffrement complet des données.
