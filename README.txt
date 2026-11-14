@@ -27,6 +27,11 @@ FICHES PDF
 RAPPELS
 - Les rappels sont affichés lorsque l'application est ouverte. Les notifications automatiques lorsque l'application est complètement fermée nécessitent un service push externe.
 
+DÉPENSES FIXES ET PONCTUELLES
+- Neuf postes de dépenses fixes sont intégrés par défaut : Dime, Ration alimentaire, Communication, Pain, Transport Fély, Mon allocation, Salaire aide ménagère, Toilette et Maman.
+- À la première utilisation, vous pouvez renseigner leurs montants pendant l’initialisation ou passer cette étape. Les montants restent modifiables dans Paramètres.
+- Pour une dépense ponctuelle, renseignez un nom, un montant et une date. Le champ de précision est facultatif ; aucune catégorie n’est demandée.
+
 COMPTABILITÉ
 - Les dépenses fixes configurées sont provisionnées et déduites automatiquement du solde du mois. Ne les saisissez pas une seconde fois dans Mouvements.
 - L'Accueil affiche uniquement l'épargne nette du mois consulté (le mois actuel lorsque vous revenez à l'Accueil).
