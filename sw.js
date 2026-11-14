@@ -1,4 +1,4 @@
-const CACHE='my-budget-v5';
+const CACHE='my-budget-v6';
 const APP_FILES=[
  './','./index.html','./manifest.webmanifest','./icon.svg',
  './icon-192.png','./icon-512.png'

@@ -11,7 +11,8 @@ HISTORIQUE
 - Pour une année passée, les 12 mois sont disponibles.
 - Pour l'année en cours, seuls le mois actuel et les mois précédents sont proposés.
 - Aucun mois futur ne peut être ouvert pour la saisie.
-- Un mois ancien sans données peut être ouvert et complété manuellement.
+- Un mois ancien sans fiche affiche d'abord un message ; sa fiche vierge n'est créée qu'après confirmation. Aucune donnée d'un autre mois n'est copiée.
+- Chaque fiche mensuelle est indépendante et peut être complétée/modifiée sans changer les autres mois.
 
 DONNÉES ET CONFIDENTIALITÉ
 - Aucune base de données en ligne, aucun compte et aucune synchronisation distante.
@@ -28,7 +29,10 @@ RAPPELS
 
 COMPTABILITÉ
 - Les dépenses fixes configurées sont provisionnées et déduites automatiquement du solde du mois. Ne les saisissez pas une seconde fois dans Mouvements.
-- Les dépôts d'épargne réduisent le solde disponible ; les retraits l'augmentent.
+- L'Accueil affiche uniquement l'épargne nette du mois consulté (le mois actuel lorsque vous revenez à l'Accueil).
+- L'onglet Épargne présente le total cumulé et le détail des montants par mois d'origine.
+- Au premier accès à un nouveau mois, l'application demande si l'épargne nette du mois précédent doit être reportée. Le report reste dans l'épargne, garde son mois d'origine et n'augmente jamais le solde disponible pour les dépenses. Le choix est mémorisé pour le mois.
+- Les dépôts réduisent le solde disponible du mois ; les retraits l'augmentent. Le report, lui, ne modifie pas le solde disponible.
 
 THÈMES
 - Trois palettes sont proposées à l'initialisation : Rose & indigo, Bleu glacier et Sauge naturelle.
